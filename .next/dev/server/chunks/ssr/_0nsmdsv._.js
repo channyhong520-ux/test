@@ -207,7 +207,7 @@ function Footer() {
                                     className: "mt-4 space-y-3",
                                     children: [
                                         {
-                                            label: "StoreWeb.rar",
+                                            label: "Coffee Store Web",
                                             href: "/product/1"
                                         },
                                         {

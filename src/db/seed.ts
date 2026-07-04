@@ -26,7 +26,7 @@ export async function seed() {
       description: "Modern coffee shop website template with responsive layout and checkout-ready pages.",
       price: "29.99",
       category: "Web",
-      imageUrl: "/images/storeweb-hero.jpg",
+      imageUrl: "/images/coffee-store-web.jpg",
       fileUrl: "https://drive.google.com/file/d/1TnMeNQZvxAgyPqmV5sAhxXn6wLdq9ZuI/view?usp=sharing",
       fileSize: "18.5 MB",
       sales: 0,
