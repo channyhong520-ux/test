@@ -40,10 +40,8 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-300">Products</h3>
             <ul className="mt-4 space-y-3">
               {[
-                { label: "StoreWeb.rar", href: "/product/1" },
-                { label: "FivemHud.rar", href: "/product/2" },
-                { label: "FivemMinimap.rar", href: "/product/3" },
-                { label: "FivemKhmerFlag.rar", href: "/product/4" },
+                { label: "Fivem Graphic Performent", href: "/product/1" },
+                { label: "Coffee Store Web", href: "/product/2" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-gray-500 transition-colors hover:text-violet-400">

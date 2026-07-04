@@ -1,11 +1,11 @@
 [
   {
     "route": "/checkout/[id]",
-    "firstLoadUncompressedJsBytes": 533931,
+    "firstLoadUncompressedJsBytes": 533976,
     "firstLoadChunkPaths": [
-      ".next\\static\\chunks\\0p~e7ukz~1i2~.js",
+      ".next\\static\\chunks\\0zubajhbb1w4n.js",
       ".next\\static\\chunks\\0d3shmwh5_nmn.js",
-      ".next\\static\\chunks\\04jau64c3622_.js",
+      ".next\\static\\chunks\\0fcora9iq566t.js",
       ".next\\static\\chunks\\00gq-v0e07i1q.js",
       ".next\\static\\chunks\\0pqt~8bl3ukh4.js",
       ".next\\static\\chunks\\02g3221oh~3le.js",
@@ -15,9 +15,9 @@
   },
   {
     "route": "/",
-    "firstLoadUncompressedJsBytes": 523059,
+    "firstLoadUncompressedJsBytes": 523007,
     "firstLoadChunkPaths": [
-      ".next\\static\\chunks\\0p~e7ukz~1i2~.js",
+      ".next\\static\\chunks\\0zubajhbb1w4n.js",
       ".next\\static\\chunks\\0d3shmwh5_nmn.js",
       ".next\\static\\chunks\\00gq-v0e07i1q.js",
       ".next\\static\\chunks\\0pqt~8bl3ukh4.js",
@@ -28,9 +28,9 @@
   },
   {
     "route": "/_not-found",
-    "firstLoadUncompressedJsBytes": 523059,
+    "firstLoadUncompressedJsBytes": 523007,
     "firstLoadChunkPaths": [
-      ".next\\static\\chunks\\0p~e7ukz~1i2~.js",
+      ".next\\static\\chunks\\0zubajhbb1w4n.js",
       ".next\\static\\chunks\\0d3shmwh5_nmn.js",
       ".next\\static\\chunks\\00gq-v0e07i1q.js",
       ".next\\static\\chunks\\0pqt~8bl3ukh4.js",
@@ -41,9 +41,9 @@
   },
   {
     "route": "/checkout/success",
-    "firstLoadUncompressedJsBytes": 523059,
+    "firstLoadUncompressedJsBytes": 523007,
     "firstLoadChunkPaths": [
-      ".next\\static\\chunks\\0p~e7ukz~1i2~.js",
+      ".next\\static\\chunks\\0zubajhbb1w4n.js",
       ".next\\static\\chunks\\0d3shmwh5_nmn.js",
       ".next\\static\\chunks\\00gq-v0e07i1q.js",
       ".next\\static\\chunks\\0pqt~8bl3ukh4.js",
@@ -54,9 +54,9 @@
   },
   {
     "route": "/product/[id]",
-    "firstLoadUncompressedJsBytes": 523059,
+    "firstLoadUncompressedJsBytes": 523007,
     "firstLoadChunkPaths": [
-      ".next\\static\\chunks\\0p~e7ukz~1i2~.js",
+      ".next\\static\\chunks\\0zubajhbb1w4n.js",
       ".next\\static\\chunks\\0d3shmwh5_nmn.js",
       ".next\\static\\chunks\\00gq-v0e07i1q.js",
       ".next\\static\\chunks\\0pqt~8bl3ukh4.js",

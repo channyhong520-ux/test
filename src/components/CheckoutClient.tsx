@@ -31,6 +31,10 @@ export function CheckoutClient({ product }: { product: SourceCode }) {
   }, [step, md5]);
 
   function getDownloadFileName() {
+    if (product.fileUrl?.includes("drive.google.com")) {
+      return product.title?.trim() || "download";
+    }
+
     const fromFileUrl = product.fileUrl?.split("/").filter(Boolean).pop();
     if (fromFileUrl) return fromFileUrl;
 

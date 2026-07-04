@@ -3,8 +3,10 @@ import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
-const GOOGLE_DRIVE_DOWNLOAD_URL =
-  "https://drive.google.com/file/d/1mIMcWVtbFCUlPNo-dnxIyyQIrtM87ltO/view?usp=sharing";
+const PRODUCT_DOWNLOAD_URLS = {
+  1: "https://drive.google.com/file/d/1mIMcWVtbFCUlPNo-dnxIyyQIrtM87ltO/view?usp=sharing",
+  2: "https://drive.google.com/file/d/1TnMeNQZvxAgyPqmV5sAhxXn6wLdq9ZuI/view?usp=sharing",
+} as const;
 
 export async function GET(
   _request: Request,
@@ -29,6 +31,7 @@ export async function GET(
     return NextResponse.json({ error: "Product not found" }, { status: 404 });
   }
 
-  // 4. Redirect all downloads to the shared Google Drive link
-  return NextResponse.redirect(GOOGLE_DRIVE_DOWNLOAD_URL);
+  // 4. Redirect to the correct Google Drive link for the product
+  const downloadUrl = PRODUCT_DOWNLOAD_URLS[product.id as keyof typeof PRODUCT_DOWNLOAD_URLS] ?? PRODUCT_DOWNLOAD_URLS[1];
+  return NextResponse.redirect(downloadUrl);
 }

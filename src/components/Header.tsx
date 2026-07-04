@@ -10,10 +10,8 @@ export function Header() {
 
   const navLinks = [
     { href: "/", label: "Products" },
-    { href: "/product/1", label: "StoreWeb" },
-    { href: "/product/2", label: "FiveM HUD" },
-    { href: "/product/3", label: "Minimap" },
-    { href: "/product/4", label: "Khmer Flag" },
+    { href: "/product/1", label: "Fivem Graphic Performent" },
+    { href: "/product/2", label: "Coffee Store Web" },
   ];
 
   return (
