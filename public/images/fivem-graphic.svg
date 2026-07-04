@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#1e1b4b"/>
+  <text x="200" y="160" font-family="sans-serif" font-size="40" font-weight="bold" fill="#fff" text-anchor="middle">FiveM</text>
+  <text x="200" y="200" font-family="sans-serif" font-size="20" fill="#38bdf8" text-anchor="middle">Graphic Performent</text>
+</svg>

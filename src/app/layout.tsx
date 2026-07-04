@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 export const metadata: Metadata = {
   title: "RLS Store — Buy Source Code Files (.rar)",
   description:
-    "Buy premium source code files — Fivem Graphic Performent and Coffee Store Web. Pay instantly with Bakong KHQR.",
+    "Buy premium source code .rar files — StoreWeb, FiveM HUD, Minimap, Khmer Flag and more. Pay instantly with Bakong KHQR.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

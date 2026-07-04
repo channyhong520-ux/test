@@ -10,7 +10,7 @@ export function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-3">
               <img
-                src="https://img.magnific.com/premium-vector/rls-letter-logo-design-technology-company-rls-logo-design-black-white-color-combination-rls-logo-rls-vector-rls-design-rls-icon-rls-alphabet-rls-typography-logo-design_229120-161038.jpg?semt=ais_hybrid&w=740&q=80"
+                src="/images/brand-logo.jpg"
                 alt="RLS Logo"
                 className="h-10 w-10 rounded-xl object-cover shadow-lg shadow-violet-500/10"
               />
@@ -40,8 +40,8 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-300">Products</h3>
             <ul className="mt-4 space-y-3">
               {[
-                { label: "Fivem Graphic Performent", href: "/product/1" },
-                { label: "Coffee Store Web", href: "/product/2" },
+                { label: "FiveM Graphic", href: "/product/1" },
+                { label: "Coffee Store", href: "/product/2" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-gray-500 transition-colors hover:text-violet-400">
@@ -77,11 +77,9 @@ export function Footer() {
             <div className="mt-4 space-y-4">
               <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
                 <div className="flex items-center gap-3">
-                  <img
-                    src="https://play-lh.googleusercontent.com/Q27JPO0Plka8m3_-h2yw3Xu22Wedt3NJcxl1NPgMlaI6VRNcmSEPArvAcmnK1_TpmMBUlTsxjS1ycy0rRDFrmA"
-                    alt="Bakong QR"
-                    className="h-10 w-10 rounded-lg object-cover"
-                  />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-blue-700">
+                    <span className="text-xs font-bold text-white">QR</span>
+                  </div>
                   <div>
                     <p className="text-sm font-semibold text-gray-200">Bakong KHQR</p>
                     <p className="text-xs text-gray-500">Scan &amp; Pay Instantly</p>

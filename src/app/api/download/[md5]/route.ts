@@ -1,12 +1,12 @@
 import { getTransactionByMd5, getSourceCodeById } from "@/lib/data";
 import { NextResponse } from "next/server";
+import { readFile } from "fs/promises";
+import { join } from "path";
 
 export const dynamic = "force-dynamic";
 
-const PRODUCT_DOWNLOAD_URLS = {
-  1: "https://drive.google.com/file/d/1mIMcWVtbFCUlPNo-dnxIyyQIrtM87ltO/view?usp=sharing",
-  2: "https://drive.google.com/file/d/1TnMeNQZvxAgyPqmV5sAhxXn6wLdq9ZuI/view?usp=sharing",
-} as const;
+// Private storage folder — NOT inside public/, so files cannot be accessed directly
+const STORAGE_DIR = join(process.cwd(), "storage");
 
 export async function GET(
   _request: Request,
@@ -31,7 +31,22 @@ export async function GET(
     return NextResponse.json({ error: "Product not found" }, { status: 404 });
   }
 
-  // 4. Redirect to the correct Google Drive link for the product
-  const downloadUrl = PRODUCT_DOWNLOAD_URLS[product.id as keyof typeof PRODUCT_DOWNLOAD_URLS] ?? PRODUCT_DOWNLOAD_URLS[1];
-  return NextResponse.redirect(downloadUrl);
+  // 4. Read from private storage/ folder
+  const fileName = product.fileUrl.replace(/^\/files\//, "");
+  const filePath = join(STORAGE_DIR, fileName);
+
+  try {
+    const fileBuffer = await readFile(filePath);
+
+    return new Response(fileBuffer, {
+      status: 200,
+      headers: {
+        "Content-Type": "application/x-rar-compressed",
+        "Content-Disposition": `attachment; filename="${fileName}"`,
+        "Content-Length": String(fileBuffer.length),
+      },
+    });
+  } catch {
+    return NextResponse.json({ error: "File not found on server" }, { status: 404 });
+  }
 }

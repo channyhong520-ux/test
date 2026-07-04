@@ -1,8 +1,6 @@
 import { db } from "@/db";
 import { sourceCodes, transactions } from "@/db/schema";
-import { eq, ilike, or, and, desc, asc, sql, inArray } from "drizzle-orm";
-
-const allowedProductIds = [1, 2];
+import { eq, ilike, or, and, desc, asc, sql } from "drizzle-orm";
 
 export type SourceCode = typeof sourceCodes.$inferSelect;
 export type Transaction = typeof transactions.$inferSelect;
@@ -40,8 +38,7 @@ export async function getSourceCodes(options?: {
           ? [desc(sourceCodes.sales)]
           : [desc(sourceCodes.createdAt)];
 
-  const productFilter = inArray(sourceCodes.id, allowedProductIds);
-  const where = conditions.length > 0 ? and(...conditions, productFilter) : productFilter;
+  const where = conditions.length > 0 ? and(...conditions) : undefined;
 
   const results = await db
     .select()
@@ -63,7 +60,7 @@ export async function getSourceCodeById(id: number) {
   const results = await db
     .select()
     .from(sourceCodes)
-    .where(and(eq(sourceCodes.id, id), inArray(sourceCodes.id, allowedProductIds)))
+    .where(eq(sourceCodes.id, id))
     .limit(1);
 
   return results[0] || null;
@@ -73,7 +70,6 @@ export async function getCategories() {
   const results = await db
     .selectDistinct({ category: sourceCodes.category })
     .from(sourceCodes)
-    .where(inArray(sourceCodes.id, allowedProductIds))
     .orderBy(asc(sourceCodes.category));
 
   return results.map((r) => r.category);
