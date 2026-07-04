@@ -10,7 +10,7 @@ export function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-3">
               <img
-                src="/images/brand-logo.jpg"
+                src="https://img.magnific.com/premium-vector/rls-letter-logo-design-technology-company-rls-logo-design-black-white-color-combination-rls-logo-rls-vector-rls-design-rls-icon-rls-alphabet-rls-typography-logo-design_229120-161038.jpg?semt=ais_hybrid&w=740&q=80"
                 alt="RLS Logo"
                 className="h-10 w-10 rounded-xl object-cover shadow-lg shadow-violet-500/10"
               />
