@@ -1,7 +1,7 @@
 import { BakongKHQR, khqrData, IndividualInfo, SourceInfo } from "bakong-khqr";
 
 const BAKONG_TOKEN = process.env.BAKONG_TOKEN || "";
-const BAKONG_MERCHANT_NAME = process.env.MERCHANT_NAME || "Coffee NT26";
+const BAKONG_MERCHANT_NAME = process.env.MERCHANT_NAME || "RESTLESS SOFTWARE";
 const BAKONG_MERCHANT_CITY = process.env.MERCHANT_CITY || "Phnom Penh";
 const BAKONG_ACCOUNT_ID = process.env.BAKONG_ACCOUNT_ID || "sokpheng_phoeurn@bkrt";
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
