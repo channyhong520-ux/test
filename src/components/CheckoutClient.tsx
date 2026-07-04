@@ -30,11 +30,19 @@ export function CheckoutClient({ product }: { product: SourceCode }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [step, md5]);
 
+  function getDownloadFileName() {
+    const fromFileUrl = product.fileUrl?.split("/").filter(Boolean).pop();
+    if (fromFileUrl) return fromFileUrl;
+
+    const fallback = product.title?.trim();
+    return fallback || "download";
+  }
+
   function triggerDownload() {
     setDownloading(true);
     const link = document.createElement("a");
     link.href = `/api/download/${md5}`;
-    link.download = product.title;
+    link.download = getDownloadFileName();
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

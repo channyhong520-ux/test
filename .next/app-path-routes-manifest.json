@@ -1,0 +1,16 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/checkout/generate/route": "/api/checkout/generate",
+  "/api/checkout/simulate-payment/route": "/api/checkout/simulate-payment",
+  "/api/checkout/status/route": "/api/checkout/status",
+  "/api/download/[md5]/route": "/api/download/[md5]",
+  "/api/health/route": "/api/health",
+  "/api/source-codes/[id]/purchase/route": "/api/source-codes/[id]/purchase",
+  "/api/source-codes/[id]/route": "/api/source-codes/[id]",
+  "/api/source-codes/route": "/api/source-codes",
+  "/checkout/[id]/page": "/checkout/[id]",
+  "/checkout/success/page": "/checkout/success",
+  "/page": "/",
+  "/product/[id]/page": "/product/[id]"
+}

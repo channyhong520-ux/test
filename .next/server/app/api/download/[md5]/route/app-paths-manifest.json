@@ -1,0 +1,3 @@
+{
+  "/api/download/[md5]/route": "app/api/download/[md5]/route.js"
+}
