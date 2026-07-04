@@ -1,9 +1,10 @@
 import { getTransactionByMd5, getSourceCodeById } from "@/lib/data";
 import { NextResponse } from "next/server";
-import { readFile } from "fs/promises";
-import { join } from "path";
 
 export const dynamic = "force-dynamic";
+
+const GOOGLE_DRIVE_DOWNLOAD_URL =
+  "https://drive.google.com/file/d/1mIMcWVtbFCUlPNo-dnxIyyQIrtM87ltO/view?usp=sharing";
 
 export async function GET(
   _request: Request,
@@ -28,22 +29,6 @@ export async function GET(
     return NextResponse.json({ error: "Product not found" }, { status: 404 });
   }
 
-  // 4. Read the file
-  const fileName = product.fileUrl.replace(/^\/files\//, "");
-  const filePath = join(process.cwd(), "public", "files", fileName);
-
-  try {
-    const fileBuffer = await readFile(filePath);
-
-    return new Response(fileBuffer, {
-      status: 200,
-      headers: {
-        "Content-Type": "application/x-rar-compressed",
-        "Content-Disposition": `attachment; filename="${fileName}"`,
-        "Content-Length": String(fileBuffer.length),
-      },
-    });
-  } catch {
-    return NextResponse.json({ error: "File not found on server" }, { status: 404 });
-  }
+  // 4. Redirect all downloads to the shared Google Drive link
+  return NextResponse.redirect(GOOGLE_DRIVE_DOWNLOAD_URL);
 }
