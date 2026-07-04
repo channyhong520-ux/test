@@ -8,11 +8,7 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
-  const navLinks = [
-    { href: "/", label: "Products" },
-    { href: "/product/1", label: "Fivem Graphic Performent" },
-    { href: "/product/2", label: "Coffee Store Web" },
-  ];
+  const navLinks = [{ href: "/", label: "Admin Dashboard" }];
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-gray-950/70 backdrop-blur-xl">

@@ -83,6 +83,12 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
+      "page": "/api/admin/products",
+      "regex": "^/api/admin/products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/admin/products(?:/)?$"
+    },
+    {
       "page": "/api/checkout/generate",
       "regex": "^/api/checkout/generate(?:/)?$",
       "routeKeys": {},
