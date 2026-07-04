@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0c1222"/>
+      <stop offset="100%" style="stop-color:#1a0f2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="627" fill="url(#bg2)"/>
+  <!-- Minimap circle -->
+  <circle cx="600" cy="340" r="160" fill="#0f1729" stroke="#334155" stroke-width="3"/>
+  <!-- Streets -->
+  <line x1="440" y1="340" x2="760" y2="340" stroke="#1e3a5f" stroke-width="4"/>
+  <line x1="600" y1="180" x2="600" y2="500" stroke="#1e3a5f" stroke-width="4"/>
+  <line x1="480" y1="240" x2="720" y2="440" stroke="#1e3a5f" stroke-width="2"/>
+  <line x1="460" y1="400" x2="740" y2="280" stroke="#1e3a5f" stroke-width="2"/>
+  <!-- Player dot -->
+  <circle cx="600" cy="340" r="8" fill="#3b82f6"/>
+  <circle cx="600" cy="340" r="14" fill="none" stroke="#3b82f680" stroke-width="2"/>
+  <!-- Compass -->
+  <text x="600" y="190" font-family="monospace" font-size="16" fill="#f59e0b" text-anchor="middle" font-weight="bold">N</text>
+  <text x="600" y="504" font-family="monospace" font-size="14" fill="#94a3b8" text-anchor="middle">S</text>
+  <text x="444" y="346" font-family="monospace" font-size="14" fill="#94a3b8" text-anchor="middle">W</text>
+  <text x="756" y="346" font-family="monospace" font-size="14" fill="#94a3b8" text-anchor="middle">E</text>
+  <!-- Zone -->
+  <rect x="430" y="530" width="340" height="36" rx="8" fill="#0f172a" stroke="#334155"/>
+  <text x="600" y="554" font-family="sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">📍 Vinewood Hills — Postal 482</text>
+  <!-- Title -->
+  <text x="600" y="70" font-family="sans-serif" font-size="52" font-weight="bold" fill="#fff" text-anchor="middle">FiveM Minimap</text>
+  <text x="600" y="105" font-family="sans-serif" font-size="20" fill="#a78bfa" text-anchor="middle">Custom GPS &amp; Zone Display</text>
+</svg>
